@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to Homepage</h1>
+
+    <ul>
+        {% for x in students %}
+        <li><a href="{% url 'studentdetails' x.id %}">{{x.firstname}} {{x.lastname}}</a></li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

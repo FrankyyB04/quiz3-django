@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Student Details</h1>
+    <h1 id='Student_Details'>Student Details</h1>
     <h2>Name: {{students.firstname}} {{students.lastname}}</h2>
     <p>Date Enrolled : {{students.date_enrolled}}</p>
     <p>Go back to <a href="{% url 'studentpage'%}">Homepage</a></p>
